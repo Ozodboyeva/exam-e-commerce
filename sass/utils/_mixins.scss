@@ -1,0 +1,71 @@
+@use "../utils/variables" as vrb;
+@use "../global";
+@mixin important-text {
+  color: vrb.$main-color;
+  font-family: Rubik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+@mixin main-text {
+  color: vrb.$main-color;
+  font-family: Rubik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+@mixin main-texts {
+  color: vrb.$primary-color;
+  font-family: Rubik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+@mixin big-texts {
+  color: vrb.$main-color;
+  font-family: Rubik;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+@mixin format-head {
+  margin-top: 8px;
+  color: vrb.$main-color;
+  font-family: Rubik;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+@mixin global-background {
+  background-color: vrb.$global-background;
+}
+@mixin btn {
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 8px;
+  padding: 4px 100px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid vrb.$btn-background;
+  color: vrb.$btn-background;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+@mixin another {
+  color: #414141;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}

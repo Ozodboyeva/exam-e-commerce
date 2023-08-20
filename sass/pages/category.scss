@@ -1,0 +1,22 @@
+@use "../global";
+@use "../utils/variables" as vrb;
+@use "../utils/mixins" as mxn;
+.main__category {
+  padding: 100px 0px;
+  .main__texts {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .main__sec {
+      @include mxn.main-text;
+    }
+    .main__part {
+      @include mxn.main-texts;
+    }
+  }
+  .main__text {
+    &-sec {
+      @include mxn.big-texts;
+    }
+  }
+}
