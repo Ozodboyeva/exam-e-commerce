@@ -1,0 +1,203 @@
+@use "../global";
+@use "../utils/variables" as vrb;
+@use "../utils/mixins" as mxn;
+.vacancy {
+  padding: 100px 0px;
+  background-color: vrb.$global-background;
+  .main__texts {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .main__sec {
+      @include mxn.main-text;
+    }
+    .main__part {
+      @include mxn.main-texts;
+    }
+  }
+  .vacancy__text {
+    color: var(--main-on-surface, #414141);
+    font-family: Rubik;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .vacancy__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    @media (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+      @media (max-width: 650px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+    .vacancy__card {
+      padding: 32px;
+      border-radius: 4px;
+      background-color: vrb.$background-color;
+      &:hover {
+        box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+      }
+      &-header {
+        color: vrb.$main-color;
+        margin-bottom: 16px;
+        font-family: Rubik;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%;
+      }
+      .vacancy__card-texts {
+        .vacancy__card-text {
+          margin-bottom: 8px;
+          color: vrb.$main-color;
+          font-family: Rubik;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+        }
+        .vacancy__card__part {
+          width: 90%;
+          color: vrb.$main-color;
+          font-family: Rubik;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px;
+          margin-bottom: 16px;
+        }
+      }
+      .moblie__phone {
+        .mobile__phone-name {
+          font-family: Rubik;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 27px;
+          margin-bottom: 8px;
+          color: vrb.$main-color;
+        }
+        .mobile__pic {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          .mobile__phone-num {
+            color: var(--main-on-surface, #414141);
+            font-family: Rubik;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            text-decoration-line: underline;
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  padding: 40px 0px;
+  background-image: url(/images/pages/index/bg.png);
+  background-repeat: no-repeat;
+  background-color: vrb.$global-background !important;
+  background-size: cover;
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 620px) {
+      align-items: first baseline;
+      @media (max-width: 400px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .footer__item {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      @media (max-width: 620px) {
+        flex-direction: column;
+      }
+      .footer__links {
+        display: flex;
+        gap: 40px;
+        @media (max-width: 1160px) {
+          flex-wrap: wrap;
+        }
+
+        .footer__link {
+          @include mxn.main-text;
+        }
+      }
+    }
+    .footer__socials {
+      display: flex;
+      gap: 40px;
+      @media (max-width: 1160px) {
+        flex-wrap: wrap;
+        @media (max-width: 620px) {
+          flex-direction: column;
+        }
+      }
+
+      .footer__social {
+        display: flex;
+        gap: 10px;
+      }
+      .footer__phone {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .phone__num {
+          color: var(--main-on-surface, #414141);
+          font-family: Rubik;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+  &__part {
+    margin-top: 30px;
+    text-align: right;
+    @media (max-width: 1160px) {
+      text-align: center;
+    }
+    .foooter__part-sec {
+      @include mxn.main-text;
+    }
+  }
+}
+.footer__fix {
+  display: none;
+  background-color: #fff;
+  @media (max-width: 500px) {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin: 0 auto;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__category {
+    &-img {
+      display: flex;
+      justify-content: center;
+    }
+    &-catalog {
+      color: var(--main-on-surface, #414141);
+      font-family: Rubik;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+}

@@ -60,6 +60,15 @@ header .nav__container {
   align-items: center;
   justify-content: space-between;
 }
+header .nav__container .nav__logo a {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 600px) {
+  header .nav__container .nav__logo a .img-none {
+    display: none;
+  }
+}
 header .nav__container .nav__items {
   display: flex;
   gap: 16px;
@@ -95,17 +104,44 @@ header .nav__container .nav__items-buttons .nav__items-btn-text a {
 header .nav__container .nav__items-buttons .search__bar {
   display: flex;
 }
-@media (max-width: 600px) {
+@media (max-width: 300px) {
   header .nav__container .nav__items-buttons .search__bar {
     display: none;
   }
 }
 header .nav__container .nav__items-buttons .search__bar-text {
+  width: 100%;
   display: inline-block;
   padding: 4px 180px 4px 10px;
   border-radius: 4px;
   border: 1px solid var(--main-secondary, #70c05b);
   background: var(--main-surface, #fff);
+}
+@media (max-width: 500px) {
+  header .nav__container .nav__items-buttons .search__bar-text {
+    width: 80%;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 500px) and (max-width: 500px) {
+  header .nav__container .nav__items-buttons .search__bar-text {
+    width: 80%;
+  }
+}
+@media (max-width: 500px) and (max-width: 500px) and (max-width: 420px) {
+  header .nav__container .nav__items-buttons .search__bar-text {
+    width: 86%;
+  }
+}
+@media (max-width: 500px) and (max-width: 500px) and (max-width: 420px) and (max-width: 390px) {
+  header .nav__container .nav__items-buttons .search__bar-text {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) and (max-width: 500px) and (max-width: 420px) and (max-width: 390px) and (max-width: 390px) {
+  header .nav__container .nav__items-buttons .search__bar-text {
+    width: 100%;
+  }
 }
 header .nav__container .nav__items-buttons .search__bar .search__images {
   background-color: transparent;
@@ -257,6 +293,8 @@ header .nav__container #navbar-responsive #navbar-close {
   header .nav .nav__menu {
     display: none;
   }
+}
+@media (max-width: 610px) and (max-width: 300px) {
   header .nav .hamburger {
     display: inline-block;
   }

@@ -15,7 +15,15 @@ header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-
+      .nav__logo a {
+        display: flex;
+        gap: 10px;
+        @media (max-width: 600px) {
+          .img-none {
+            display: none;
+          }
+        }
+      }
       .nav__items {
         display: flex;
         gap: 16px;
@@ -46,15 +54,34 @@ header {
           }
           .search__bar {
             display: flex;
-            @media (max-width: 600px) {
+
+            @media (max-width: 300px) {
               display: none;
             }
             &-text {
+              width: 100%;
               display: inline-block;
               padding: 4px 180px 4px 10px;
               border-radius: 4px;
               border: 1px solid var(--main-secondary, #70c05b);
               background: var(--main-surface, #fff);
+              @media (max-width: 500px) {
+                width: 80%;
+                margin-left: 10px;
+                // display: inline-block;
+                @media (max-width: 500px) {
+                  width: 80%;
+                  @media (max-width: 420px) {
+                    width: 86%;
+                    @media (max-width: 390px) {
+                      width: 90%;
+                      @media (max-width: 390px) {
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+              }
             }
             .search__images {
               background-color: transparent;
@@ -104,6 +131,7 @@ header {
         display: none;
         &__btn {
           background-color: red;
+
           border: none;
           position: absolute;
           z-index: 1;
@@ -197,12 +225,14 @@ header {
       .nav__menu {
         display: none;
       }
-      .hamburger {
-        display: inline-block;
-      }
+      @media (max-width: 300px) {
+        .hamburger {
+          display: inline-block;
+        }
 
-      #navbar-responsive {
-        display: flex;
+        #navbar-responsive {
+          display: flex;
+        }
       }
     }
   }
