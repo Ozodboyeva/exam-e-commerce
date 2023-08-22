@@ -320,6 +320,7 @@ input:focus {
   }
 }
 .promotion .promotion__another__cards .another__card {
+  position: relative;
   padding: 8px;
   background-color: #fff;
 }
@@ -328,9 +329,9 @@ input:focus {
 }
 .promotion .promotion__another__cards .another__card .heart {
   display: inline-block;
-  position: relative;
-  bottom: 180px;
-  left: 260px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 .promotion .promotion__another__cards .another__card .another__card-texts .another__card-num {
   color: var(--main-on-surface, #414141);
@@ -404,28 +405,35 @@ input:focus {
   line-height: 150%; /* 36px */
 }
 .special__format .special__format-cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
 @media (max-width: 1120px) {
   .special__format .special__format-cards {
-    flex-direction: column;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .special__format .special__format-cards .special__format-card {
   padding: 30px 40px 10px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   border-radius: 4px;
   background: var(--main-primary-muted, #fcd5ba);
+}
+.special__format .special__format-cards .special__format-card:hover {
   box-shadow: 0px 8px 16px 0px rgba(202, 147, 96, 0.5);
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .special__format .special__format-cards .special__format-card {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }
-.special__format .special__format-cards .special__format-card .special__format-texts .special__format-text {
+.special__format .special__format-cards .special__format-texts {
+  width: 50%;
+}
+.special__format .special__format-cards .special__format-texts .special__format-text {
   color: #414141;
   font-family: Rubik;
   font-size: 24px;
@@ -434,38 +442,41 @@ input:focus {
   line-height: 150%;
 }
 @media (max-width: 1120px) {
-  .special__format .special__format-cards .special__format-card .special__format-texts .special__format-text {
+  .special__format .special__format-cards .special__format-texts .special__format-text {
     font-size: 22px;
   }
 }
 @media (max-width: 1120px) and (max-width: 1000px) {
-  .special__format .special__format-cards .special__format-card .special__format-texts .special__format-text {
+  .special__format .special__format-cards .special__format-texts .special__format-text {
     font-size: 20px;
   }
 }
 @media (max-width: 1120px) and (max-width: 1000px) and (max-width: 900px) {
-  .special__format .special__format-cards .special__format-card .special__format-texts .special__format-text {
+  .special__format .special__format-cards .special__format-texts .special__format-text {
     font-size: 18px;
   }
 }
-.special__format .special__format-cards .special__format-card .special__format-texts .special__format-head {
+.special__format .special__format-cards .special__format-texts .special__format-head {
   margin-top: 8px;
   color: #414141;
   font-family: Rubik;
-  font-size: 36px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
 }
-.special__format .special__format-cards .special__format-card .special__format-images img {
+.special__format .special__format-cards .special__format-images img {
   width: 100%;
 }
-.special__format .special__format-cards .special__format-card:nth-child(2) {
+.special__format .special__format-card:nth-child(2) {
   border-radius: 4px;
   background-image: url(/images/pages/index/back.jpg);
 }
-.special__format .special__format-cards .special__format-card:nth-child(2) .text {
-  width: 50%;
+.special__format .special__format-card:nth-child(2):hover {
+  box-shadow: 4px 8px 16px 0px rgba(112, 192, 91, 0.2);
+}
+.special__format .special__format-card:nth-child(2) .text {
+  width: 100%;
   color: #414141;
 }
 
@@ -477,7 +488,7 @@ input:focus {
   margin-top: 8px;
   color: #414141;
   font-family: Rubik;
-  font-size: 36px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
@@ -687,15 +698,15 @@ input:focus {
   display: none;
   background-color: #fff;
 }
-@media (max-width: 390px) {
+@media (max-width: 500px) {
   .footer__fix {
     position: fixed;
-    z-index: 99px;
-    left: 0;
+    width: 100%;
     bottom: 0;
+    margin: 0 auto;
     padding: 8px 16px;
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
   }
 }
 .footer__fix .footer__category-img {
