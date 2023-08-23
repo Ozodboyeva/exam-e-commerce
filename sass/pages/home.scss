@@ -213,6 +213,11 @@
             font-style: normal;
             font-weight: 400;
             line-height: 24px;
+            &:hover {
+              border-color: #fff;
+              color: #fff;
+              background: #f63;
+            }
           }
           .parts {
             background-color: #f63;
@@ -278,6 +283,11 @@
       .another__btn {
         @include mxn.btn;
         margin-top: 30px;
+        &:hover {
+          background-color: #f63;
+          border-color: #fff;
+          color: #fff;
+        }
       }
       .act {
         margin-top: 26px;
@@ -456,6 +466,10 @@
           font-style: normal;
           font-weight: 400;
           line-height: 150%; /* 24px */
+          &:hover {
+            color: #fff;
+            background: var(--main-secondary, #70c05b);
+          }
         }
         .section {
           margin-top: 35px;

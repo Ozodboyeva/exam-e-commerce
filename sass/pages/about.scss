@@ -1,0 +1,43 @@
+@use "../global";
+@use "../utils/variables" as vrb;
+@use "../utils/mixins" as mxn;
+.about {
+  padding: 130px 0px;
+  background-color: vrb.$global-background;
+  .main__texts {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .main__sec {
+      @include mxn.main-text;
+    }
+    .main__part {
+      @include mxn.main-texts;
+    }
+  }
+  .about-text {
+    color: vrb.$main-color;
+    font-family: Rubik;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72px;
+    @media (max-width: 550px) {
+      font-size: 40px;
+    }
+  }
+  .about__head {
+    margin-top: 17px;
+    width: 45%;
+    color: var(--main-primary, #f63);
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  .about__image img {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

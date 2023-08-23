@@ -297,6 +297,11 @@ input:focus {
   font-weight: 400;
   line-height: 24px;
 }
+.promotion .promotion__cards .promotion__card .promotion__card__items .promotion__card-item .promotion__btn:hover {
+  border-color: #fff;
+  color: #fff;
+  background: #f63;
+}
 .promotion .promotion__cards .promotion__card .promotion__card__items .promotion__card-item .parts {
   background-color: #f63;
   color: #fff;
@@ -384,6 +389,11 @@ input:focus {
   font-weight: 400;
   line-height: 24px;
   margin-top: 30px;
+}
+.promotion .promotion__another__cards .another__card .another__btn:hover {
+  background-color: #f63;
+  border-color: #fff;
+  color: #fff;
 }
 .promotion .promotion__another__cards .another__card .act {
   margin-top: 26px;
@@ -588,6 +598,10 @@ input:focus {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 24px */
+}
+.article .article__cards .article__card-texts .article__card-btn:hover {
+  color: #fff;
+  background: var(--main-secondary, #70c05b);
 }
 .article .article__cards .article__card-texts .section {
   margin-top: 35px;
