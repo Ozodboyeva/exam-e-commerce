@@ -1,0 +1,222 @@
+@use "../global";
+@use "../utils/variables" as vrb;
+@use "../utils/mixins" as mxn;
+.contact {
+  padding: 130px 0px;
+  background-color: vrb.$global-background;
+  .main__texts {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    .main__sec {
+      @include mxn.main-text;
+    }
+    .main__part {
+      @include mxn.main-texts;
+    }
+  }
+  .contact__text {
+    color: var(--main-on-surface, #414141);
+    font-family: Rubik;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .contact__cards {
+    display: flex;
+    gap: 130px;
+    @media (max-width: 500px) {
+      flex-wrap: wrap;
+    }
+    .contact___div {
+      display: flex;
+      gap: 10px;
+      .text-contact {
+        .conact__card-text {
+          color: vrb.$main-color;
+          font-family: Rubik;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+        }
+        .contact__card-num {
+          color: vrb.$main-color;
+          font-family: Rubik;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 150%; /* 36px */
+          text-decoration-line: underline;
+        }
+      }
+    }
+  }
+}
+.magazine {
+  background-color: vrb.$global-background;
+  .magazine__text {
+    color: vrb.$main-color;
+    font-family: Rubik;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .map__btns {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 24px;
+    @media (max-width: 400px) {
+      flex-wrap: wrap;
+    }
+    .map__btn {
+      padding: 8px;
+      border-radius: 4px;
+      background: var(--grayscale-lightest, #f3f2f1);
+      color: var(--grayscale-hardest, #606060);
+      text-align: center;
+      font-family: Rubik;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 18px */
+      &:hover {
+        background-color: vrb.$btn-background;
+        color: white;
+      }
+    }
+  }
+  .map__parts {
+    display: flex;
+    gap: 80px;
+    @media (max-width: 900px) {
+      flex-wrap: wrap;
+    }
+    .map__texts {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      .map__item {
+        color: vrb.$main-color;
+        font-family: Rubik;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+      }
+    }
+  }
+  .map__images img {
+    margin-top: 32px;
+    width: 100%;
+    margin-bottom: 80px;
+  }
+}
+.footer {
+  padding: 40px 0px;
+  background-image: url(/images/pages/index/bg.png);
+  background-repeat: no-repeat;
+  background-color: vrb.$global-background !important;
+  background-size: cover;
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 620px) {
+      align-items: first baseline;
+      @media (max-width: 400px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .footer__item {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      @media (max-width: 620px) {
+        flex-direction: column;
+      }
+      .footer__links {
+        display: flex;
+        gap: 40px;
+        @media (max-width: 1160px) {
+          flex-wrap: wrap;
+        }
+
+        .footer__link {
+          @include mxn.main-text;
+        }
+      }
+    }
+    .footer__socials {
+      display: flex;
+      gap: 40px;
+      @media (max-width: 1160px) {
+        flex-wrap: wrap;
+        @media (max-width: 620px) {
+          flex-direction: column;
+        }
+      }
+
+      .footer__social {
+        display: flex;
+        gap: 10px;
+      }
+      .footer__phone {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .phone__num {
+          color: var(--main-on-surface, #414141);
+          font-family: Rubik;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+  &__part {
+    margin-top: 30px;
+    text-align: right;
+    @media (max-width: 1160px) {
+      text-align: center;
+    }
+    .foooter__part-sec {
+      @include mxn.main-text;
+    }
+  }
+}
+.footer__fix {
+  display: none;
+  background-color: #fff;
+  @media (max-width: 500px) {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    margin: 0 auto;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__category {
+    &-img {
+      display: flex;
+      justify-content: center;
+    }
+    &-catalog {
+      color: var(--main-on-surface, #414141);
+      font-family: Rubik;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+}
